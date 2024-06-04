@@ -1,11 +1,14 @@
 import { FaApple } from "react-icons/fa";
 import download from "../assets/download.png"
 import Image from "next/image";
+import gradient from "../assets/ellipseGradient.png"
 
 const DownloadPage = () => {
   return (
-    <div>
+    <div className="relative">
+      <Image src={gradient} height={500} width={500} alt="gradient" className="absolute -top-20 -left-20" />
       <div className="relative w-full flex items-center justify-center">
+
         <div className="py-16 md:py-32 relative">
           <Image
             width={1200}

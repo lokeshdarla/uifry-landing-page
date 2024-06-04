@@ -4,20 +4,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Header = () => {
-
-  const [state, setState] = useState(false)
+  const [state, setState] = useState(false);
 
   const navigation = [
-    { title: "Home", path: "javascript:void(0)" },
-    { title: "About Us", path: "javascript:void(0)" },
-    { title: "Pricing", path: "javascript:void(0)" },
-    { title: "Features", path: "javascript:void(0)" }
-  ]
+    { title: "Home", path: "/" },
+    { title: "About Us", path: "/about" },
+    { title: "Pricing", path: "/pricing" },
+    { title: "Features", path: "/features" }
+  ];
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (!target.closest(".menu-btn")) {
+      if (!target.closest(".menu-btn") && !target.closest(".sidebar")) {
         setState(false);
       }
     };
@@ -29,11 +28,10 @@ const Header = () => {
     };
   }, []);
 
-
   return (
-    <nav className={`bg-white  py-7 font-Space font-semibold  md:text-sm ${state ? "shadow-lg rounded-xl border mx-2 mt-2  md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`}>
+    <nav className={`bg-white py-7 font-Space font-semibold md:text-sm `}>
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
-        <div className="flex items-center justify-between py-5 md:block">
+        <div className="flex items-center focus:outline-none justify-between py-5 md:block">
           <Link href="/">
             <Image
               src="/logo.png"
@@ -60,28 +58,31 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>
-          <ul className="justify-center items-center space-y-6 md:flex md:space-x-6  md:space-y-0">
-            {
-              navigation.map((item, idx) => {
-                return (
-                  <li key={idx} className="text-black hover:text-[#FF5555]">
-                    <a href={item.path} className="block text-lg">
-                      {item.title}
-                    </a>
-                  </li>
-                )
-              })
-            }
+        <div className={`sidebar fixed top-0 left-0 h-full w-64 gap-6 px-10 flex flex-col md:flex-row justify-center items-center  bg-white shadow-lg z-50  md:w-full transform ${state ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:flex md:items-center md:justify-between md:space-x-6 md:bg-transparent md:shadow-none md:w-auto md:mt-0`}>
+          <ul className="flex flex-col items-center justify-center  space-y-6 md:flex-row md:space-y-0 md:space-x-6">
+            {state && <Image
+              src="/logo.png"
+              width={125}
+              height={50}
+              alt="Uifry logo"
+            />}
+            {navigation.map((item, idx) => (
+              <li key={idx} className="text-black hover:text-[#FF5555]">
+                <Link href={item.path} className="block text-lg">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
-          <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <a href="javascript:void(0)" className="flex text-lg items-center justify-center gap-x-1 py-3 px-8 text-white font-medium bg-gray-800 hover:bg-[#FF5555] active:bg-gray-900 rounded-md md:inline-flex">
+          <div className="flex justify-center items-center  mt-0">
+            <a href="javascript:void(0)" className="text-lg items-center justify-center py-3 px-8 text-white font-medium bg-gray-800 hover:bg-[#FF5555] active:bg-gray-900 rounded-md md:inline-flex">
               Download
             </a>
           </div>
         </div>
       </div>
     </nav>
-  )
-}
-export default Header
+  );
+};
+
+export default Header;

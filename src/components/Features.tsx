@@ -13,7 +13,7 @@ const Features = () => {
           <Image alt="features-image" height={500} width={500} src={img} className="w-full mx-auto sm:w-10/12  lg:w-full" />
         </div>
         <div className="space-y-4 relative flex-1 sm:text-center px-10 lg:text-left">
-          <Image src={gradient} alt="gradient" width={500} height={500} className="absolute -top-10 z-0 -right-20" />
+          <Image src={gradient} alt="gradient" width={500} height={500} className="absolute -top-10 z-0 sm:-right-20 right-0 overflow-hidden" />
           <h1 className="text-gray-800 relative z-10 font-bold text-4xl xl:text-5xl">
             <span className="text-[#FF5555] text-xl ">Features</span>
             <p className="font-bold text-4xl lg:text-5xl xl:text-5xl text-black pb-5">Uifry Premium</p>
