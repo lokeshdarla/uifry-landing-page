@@ -72,7 +72,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
+    <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto ">
       <div className=" justify-center gap-16 md:flex">
         <div>
           <div className="max-w-xs">
@@ -134,7 +134,7 @@ const Footer = () => {
           }
         </div>
       </div>
-      <div className="mt-8 py-6 border-t border-black items-center text-black font-bold justify-center sm:flex">
+      <div className="mt-8 py-6 border-t border-black items-center text-black font-medium justify-center sm:flex">
         <div className="mt-4 sm:mt-0">
           Copyright 2022 uifry.com all rights reserved
         </div>

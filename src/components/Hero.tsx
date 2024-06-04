@@ -3,13 +3,15 @@ import home2 from "../assets/hero2.png"
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import gradient from '../assets/ellipseGradient.png'
 
 const Home = () => {
   return (
     <div>
       <section className="mx-auto max-w-screen-xl  pb-4  items-center flex flex-col px-10 lg:px-0 lg:flex-row justify-center  bg-white">
-        <div className="space-y-4 flex-1 sm:text-center lg:text-left lg:pl-20 flex lg:items-start md:items-center  justify-center flex-col">
-          <h1 className="text-gray-800 font-black pt-16 text-3xl sm:text-4xl md:text-5xl lg:text-5xl  ">
+        <div className="space-y-4 flex-1 relative sm:text-center lg:text-left lg:pl-20 flex lg:items-start z-20 md:items-center  justify-center flex-col">
+          <Image src={gradient} width={500} height={500} alt="gradient" className="absolute -top-16 z-10 -right-16" />
+          <h1 className="text-gray-800 relative z-20 font-bold pt-16 text-3xl sm:text-4xl md:text-5xl lg:text-5xl  ">
             Make The Best Financial Decisions
           </h1>
           <p className="text-gray-500 max-w-xl leading-relaxed sm:mx-auto lg:ml-0">

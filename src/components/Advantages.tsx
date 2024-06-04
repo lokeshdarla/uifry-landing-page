@@ -9,7 +9,7 @@ const Advantages = () => {
       <section className="mx-auto max-w-screen-xl  px-10 items-center lg:flex ">
         <div className="space-y-1 font-bold flex-1  sm:text-center lg:text-left lg:ml-3">
           <p className="text-[#FF5555] text-2xl">Advantages</p>
-          <p className="text-black font-black  text-4xl lg:text-5xl  sm:text-center lg:text-left">why choose Uifry?</p>
+          <p className="text-black font-bold  text-4xl lg:text-5xl  sm:text-center lg:text-left">why choose Uifry?</p>
           <div className="flex pb-6 pt-4 text-whit items-center justify-start sm:justify-center lg:justify-start">
             <div className=" rounded-full text-2xl flex items-center justify-center w-8 h-8 bg-[#FF5555]"><FaRegBell color="white" size={15} /></div>
             <p className="bg-white font-semibold text-black pl-4 text-2xl">Clever Notifications</p>

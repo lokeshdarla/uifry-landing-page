@@ -1,4 +1,5 @@
 import aboutus from "../assets/aboutus.png"
+import avatars from "../assets/avatars.png"
 import Image from "next/image";
 
 const AboutUs = () => {
@@ -7,7 +8,7 @@ const AboutUs = () => {
       <section className=" mx-auto max-w-screen-xl pb-4 px-4 items-center justify-center lg:flex lg:flex-col md:px-8">
         <div className='text-center'>
           <h2 className='font-bold text-[#FF5555] text-2xl'>Testimonial</h2>
-          <p className='text-black font-black  text-4xl  lg:text-5xl  text-center max-w-xl'>What our users say About Us?</p>
+          <p className='text-black font-bold  text-4xl  lg:text-5xl  text-center max-w-xl'>What our users say About Us?</p>
         </div>
         <div className=" mx-auto max-w-screen-xl pb-4 px-4 items-center lg:flex md:px-8">
           <div className="flex-1 text-center mt-4 lg:mt-0 lg:ml-3">
@@ -21,7 +22,8 @@ const AboutUs = () => {
               Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse aliquam.
             </p>
 
-            <div className="flex px-0  md:px-0 flex-col items-start justify-center">
+            <div className="flex px-0  md:px-0 flex-col gap-5 items-start justify-center">
+              <Image src={avatars} alt="avatar" width={300} height={100} className="" />
               <p className="font-bold text-xl">Nick Jonas</p>
             </div>
 
